@@ -67,8 +67,8 @@ npm install
 
 4. Configure MongoDB connection:
    - Open `database/db.js`
-   - Update the MongoDB connection string with your credentials if needed
-   - Default password is set to `docsclone`
+   - Update the MongoDB connection string with your credentials
+   - Replace the hardcoded password with your own secure password or use environment variables
 
 5. Start the development server:
 ```bash
@@ -135,12 +135,12 @@ The backend is configured to accept connections from:
 
 To modify allowed origins, update the CORS configuration in `backend/index.js`.
 
-## 🔧 Environment Variables
+## 🔧 Configuration
 
 You can customize the following settings:
 
 - **Port**: Default is `9000` (modify in `index.js`)
-- **MongoDB Password**: Default is `docsclone` (modify in `database/db.js`)
+- **MongoDB Connection**: Update with your own credentials in `database/db.js` (consider using environment variables for security)
 - **Frontend URL**: Default is `http://localhost:3000` (modify CORS settings in `index.js`)
 
 ## 📦 Dependencies
