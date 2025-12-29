@@ -67,8 +67,9 @@ npm install
 
 4. Configure MongoDB connection:
    - Open `database/db.js`
-   - Update the MongoDB connection string with your credentials
-   - Replace the hardcoded password with your own secure password or use environment variables
+   - **Important**: Do not use hardcoded credentials in production
+   - For development, update the connection string with your credentials
+   - For production, use environment variables to store sensitive credentials securely
 
 5. Start the development server:
 ```bash
@@ -140,7 +141,9 @@ To modify allowed origins, update the CORS configuration in `backend/index.js`.
 You can customize the following settings:
 
 - **Port**: Default is `9000` (modify in `index.js`)
-- **MongoDB Connection**: Update with your own credentials in `database/db.js` (consider using environment variables for security)
+- **MongoDB Connection**: Update credentials in `database/db.js`
+  - **Recommended**: Use environment variables for database credentials (especially in production)
+  - Create a `.env` file and load credentials using a package like `dotenv`
 - **Frontend URL**: Default is `http://localhost:3000` (modify CORS settings in `index.js`)
 
 ## 📦 Dependencies
